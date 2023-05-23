@@ -67,3 +67,7 @@ mongoose
     // Post.insertMany(posts);
   })
   .catch((error) => console.log(`${error} did not connect`));
+
+  app.get('/', (req, res) => {
+    res.send('Welcome to the server')
+  });
