@@ -70,7 +70,9 @@ font-family: 'Rubik', sans-serif;
 
 } 
 
-
+.Toastify__close-button {
+  color: red !important;
+}
 
 
 

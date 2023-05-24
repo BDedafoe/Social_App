@@ -9,6 +9,7 @@ import {
   FormControl,
   useTheme,
   useMediaQuery,
+  Tooltip,
 } from "@mui/material";
 import {
   Search,
@@ -76,6 +77,7 @@ const Navbar = () => {
       {/* DESKTOP NAV */}
       {isNonMobileScreens ? (
         <FlexBetween gap="2rem">
+            <Tooltip title="Theme">
           <IconButton onClick={() => dispatch(setMode())}>
             {theme.palette.mode === "dark" ? (
               <DarkMode sx={{ fontSize: "25px" }} />
@@ -83,6 +85,7 @@ const Navbar = () => {
               <LightMode sx={{ color: dark, fontSize: "25px" }} />
             )}
           </IconButton>
+          </Tooltip>
           <Message sx={{ fontSize: "25px" }} />
           <Notifications sx={{ fontSize: "25px" }} />
           <Help sx={{ fontSize: "25px" }} />
@@ -148,6 +151,7 @@ const Navbar = () => {
             alignItems="center"
             gap="3rem"
           >
+           <Tooltip title="Theme">
             <IconButton
               onClick={() => dispatch(setMode())}
               sx={{ fontSize: "25px" }}
@@ -158,9 +162,21 @@ const Navbar = () => {
                 <LightMode sx={{ color: dark, fontSize: "25px" }} />
               )}
             </IconButton>
-            <Message sx={{ fontSize: "25px" }} />
+            </Tooltip> 
+
+            <Tooltip title="Messages">
+            <IconButton
+             onClick={() => navigate("/home")}
+             sx={{ fontSize: "25px" }} />
+             <Message />
+            </Tooltip>
+            <Tooltip title="Notifications">
             <Notifications sx={{ fontSize: "25px" }} />
+            </Tooltip>
+            <Tooltip title="Help">
             <Help sx={{ fontSize: "25px" }} />
+            </Tooltip>
+
             <FormControl variant="standard" value={fullName}>
               <Select
                 value={fullName}

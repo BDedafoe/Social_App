@@ -72,6 +72,32 @@ export const likePost = async (req, res) => {
   }
 };
 
+export const commentPost = async (req, res) => {
+    try {
+      const { id } = req.params;
+      const { userId } = req.body;
+      const post = await Post.findById(id);
+      const isCommented = post.comments.get(userId);
+  
+      if (isCommented) {
+        post.comments.delete(userId);
+      } else {
+        post.comments.set(userId, true);
+      }
+  
+      const updatedPost = await Post.findByIdAndUpdate(
+        id,
+        { comments: post.comments },
+        { new: true }
+      );
+  
+      res.status(200).json(updatedPost);
+    } catch (err) {
+      res.status(404).json({ message: err.message });
+    }
+  };
+  
+
 /* DELETE */
 export const deletePost = async (req, res) => {
     try {

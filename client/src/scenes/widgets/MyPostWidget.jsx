@@ -96,7 +96,7 @@ import {
                   >
                     <input {...getInputProps()} />
                     {!image ? (
-                      <p>Add Image Here</p>
+                      <p>Click Here</p>
                     ) : (
                       <FlexBetween>
                         <Typography>{image.name}</Typography>
@@ -130,18 +130,21 @@ import {
               Image
             </Typography>
           </FlexBetween>
+
+         
+          <FlexBetween gap="0.25rem" onClick={() => setIsImage(!isImage)}>
+            <AttachFileOutlined sx={{ color: mediumMain }} />
+            <Typography
+              color={mediumMain}
+              sx={{ "&:hover": { cursor: "pointer", color: medium } }}
+            >
+              Attachment
+            </Typography>
+          </FlexBetween>
+          
   
           {isNonMobileScreens ? (
             <>
-              <FlexBetween gap="0.25rem">
-                <GifBoxOutlined sx={{ color: mediumMain }} />
-                <Typography color={mediumMain}>Clip</Typography>
-              </FlexBetween>
-  
-              <FlexBetween gap="0.25rem">
-                <AttachFileOutlined sx={{ color: mediumMain }} />
-                <Typography color={mediumMain}>Attachment</Typography>
-              </FlexBetween>
   
               <FlexBetween gap="0.25rem">
                 <MicOutlined sx={{ color: mediumMain }} />

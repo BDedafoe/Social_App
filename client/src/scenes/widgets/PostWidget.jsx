@@ -3,7 +3,7 @@ import {
     FavoriteBorderOutlined,
     FavoriteOutlined,
     ShareOutlined,
-    DeleteOutlineSharp
+    ClearOutlined,
   } from "@mui/icons-material";
   import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
   import FlexBetween from "components/FlexBetween";
@@ -50,6 +50,7 @@ import {
       dispatch(setPost({ post: updatedPost }));
     };
 
+
     const [shouldRerender, setShouldRerender] = useState(false);
 
     const handleDelete = async () => {
@@ -63,7 +64,7 @@ import {
 
     const message = await response.json();
     setShouldRerender(true);
-    toast.success('Post deleted!', {
+    toast('Post deleted!', {
       position: toast.POSITION.TOP_RIGHT
     });
   };
@@ -114,8 +115,8 @@ import {
           </FlexBetween>
   
           <IconButton onClick={({message}) => handleDelete(!isComments)}>
-          <ToastContainer />
-            <DeleteOutlineSharp />
+          <ToastContainer autoClose={1500}/>
+            <ClearOutlined />
           </IconButton>
         </FlexBetween>
 
