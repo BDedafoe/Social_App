@@ -56,7 +56,7 @@ const Navbar = () => {
             },
           }}
         >
-          Sociopedia
+          Famchat
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween

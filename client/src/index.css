@@ -8,3 +8,31 @@ body,
   width: 100%;
   font-family: "Rubik", sans-serif;
 }
+
+.css-16vbkgj-MuiTypography-root {
+  color: #d82460 !important;
+}
+
+.css-12a2lu5-MuiTypography-root {
+  color: #d82460!important;
+}
+
+.MuiButtonBase-root {
+  color: #d82460!important;
+
+}
+
+.MuiButton-root {
+  color: #00D5FA !important;
+  background-color: #d82460 !important;
+}
+
+.css-18l7mx6-MuiButtonBase-root-MuiButton-root.Mui-disabled {
+  background-color: #00D5FA !important;
+  color: #d82460 !important;
+}
+
+.css-3494nj-MuiButtonBase-root-MuiButton-root.Mui-disabled {
+  background-color: #00D5FA !important;
+  color: #d82460 !important;
+}

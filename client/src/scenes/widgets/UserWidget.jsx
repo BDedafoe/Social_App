@@ -11,6 +11,8 @@ import {
   import { useSelector } from "react-redux";
   import { useEffect, useState } from "react";
   import { useNavigate } from "react-router-dom";
+  import LinkedInIcon from '@mui/icons-material/LinkedIn';
+  import InstagramIcon from '@mui/icons-material/Instagram';
   
   const UserWidget = ({ userId, picturePath }) => {
     const [user, setUser] = useState(null);
@@ -120,12 +122,12 @@ import {
   
           <FlexBetween gap="1rem" mb="0.5rem">
             <FlexBetween gap="1rem">
-              <img src="../assets/twitter.png" alt="twitter" />
+             <LinkedInIcon fontSize="large" sx={{ color: main }} />
               <Box>
                 <Typography color={main} fontWeight="500">
-                  Twitter
+                  LinkedIn
                 </Typography>
-                <Typography color={medium}>Social Network</Typography>
+                <Typography color={medium}>Network Platform</Typography>
               </Box>
             </FlexBetween>
             <EditOutlined sx={{ color: main }} />
@@ -133,12 +135,12 @@ import {
   
           <FlexBetween gap="1rem">
             <FlexBetween gap="1rem">
-              <img src="../assets/linkedin.png" alt="linkedin" />
+             <InstagramIcon fontSize="large" sx={{ color: main }} />
               <Box>
                 <Typography color={main} fontWeight="500">
-                  Linkedin
+                  Instagram
                 </Typography>
-                <Typography color={medium}>Network Platform</Typography>
+                <Typography color={medium}>Social Network</Typography>
               </Box>
             </FlexBetween>
             <EditOutlined sx={{ color: main }} />
