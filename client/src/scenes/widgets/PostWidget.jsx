@@ -3,6 +3,7 @@ import {
     FavoriteBorderOutlined,
     FavoriteOutlined,
     ShareOutlined,
+    DeleteOutlineSharp
   } from "@mui/icons-material";
   import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
   import FlexBetween from "components/FlexBetween";
@@ -11,6 +12,8 @@ import {
   import { useState } from "react";
   import { useDispatch, useSelector } from "react-redux";
   import { setPost } from "state";
+  import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
   
   const PostWidget = ({
     postId,
@@ -46,6 +49,28 @@ import {
       const updatedPost = await response.json();
       dispatch(setPost({ post: updatedPost }));
     };
+
+    const [shouldRerender, setShouldRerender] = useState(false);
+
+    const handleDelete = async () => {
+    const response = await fetch(`http://localhost:3001/posts/${postId}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    });
+
+    const message = await response.json();
+    setShouldRerender(true);
+    toast.success('Post deleted!', {
+      position: toast.POSITION.TOP_RIGHT
+    });
+  };
+
+ if (shouldRerender) {
+    return null; // return null to prevent rendering the deleted post
+  }
   
     return (
       <WidgetWrapper m="2rem 0">
@@ -88,10 +113,12 @@ import {
             </FlexBetween>
           </FlexBetween>
   
-          <IconButton>
-            <ShareOutlined />
+          <IconButton onClick={({message}) => handleDelete(!isComments)}>
+          <ToastContainer />
+            <DeleteOutlineSharp />
           </IconButton>
         </FlexBetween>
+
         {isComments && (
           <Box mt="0.5rem">
             {comments.map((comment, i) => (
