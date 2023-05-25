@@ -35,7 +35,7 @@ const AdvertWidget = () => {
         width="70%"
         height="auto"
         alt="advert"
-        src="http://localhost:3001/assets/info2.jpg"
+        src="https://famchat.onrender.com/assets/info2.jpg"
         style={{ borderRadius: "0.75rem", margin: "0.75rem 0" }}
       />
       <FlexBetween>
@@ -58,7 +58,7 @@ const AdvertWidget = () => {
         width="100%"
         height="auto"
         alt="advert"
-        src="http://localhost:3001/assets/info3.jpg"
+        src="https://famchat.onrender.com/assets/info3.jpg"
         style={{ borderRadius: "0.75rem", margin: "0.75rem 0" }}
       />
       <FlexBetween>
@@ -81,7 +81,7 @@ const AdvertWidget = () => {
         width="100%"
         height="auto"
         alt="advert"
-        src="http://localhost:3001/assets/info4.jpg"
+        src="https://famchat.onrender.com/assets/info4.jpg"
         style={{ borderRadius: "0.75rem", margin: "0.75rem 0" }}
       />
       <FlexBetween>
@@ -104,7 +104,7 @@ const AdvertWidget = () => {
         width="100%"
         height="auto"
         alt="advert"
-        src="http://localhost:3001/assets/info1.jpg"
+        src="https://famchat.onrender.com/assets/info1.jpg"
         style={{ borderRadius: "0.75rem", margin: "0.75rem 0" }}
       />
       <FlexBetween>
