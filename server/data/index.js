@@ -149,7 +149,7 @@ export const posts = [
     firstName: "Steve",
     lastName: "Ralph",
     location: "New York, CA",
-    description: "Some really long random description",
+    description: "This is exactly how I feel whenever I meet someone",
     picturePath: "post1.jpeg",
     userPicturePath: "p3.jpeg",
     likes: new Map([
@@ -171,7 +171,7 @@ export const posts = [
     lastName: "Grimes",
     location: "Korea, CA",
     description:
-      "Another really long random description. This one is longer than the previous one.",
+      "Had a blast camping with this crew! Can't wait for the next adventure",
     picturePath: "post2.jpeg",
     userPicturePath: "p6.jpeg",
     likes: new Map([
@@ -194,7 +194,7 @@ export const posts = [
     lastName: "Doe",
     location: "Utah, CA",
     description:
-      "This is the last really long random description. This one is longer than the previous one.",
+      "Enjoying my walk on this beautiful morning",
     picturePath: "post3.jpeg",
     userPicturePath: "p5.jpeg",
     likes: new Map([
@@ -218,7 +218,7 @@ export const posts = [
     lastName: "Vanderbeer",
     location: "Los Angeles, CA",
     description:
-      "This is the last really long random description. This one is longer than the previous one. Man I'm bored. I'm going to keep typing until I run out of things to say.",
+      "Life's a beach and I'm just playing in the sand 😎",
     picturePath: "post4.jpeg",
     userPicturePath: "p7.jpeg",
     likes: new Map([
@@ -242,7 +242,7 @@ export const posts = [
     lastName: "Vowel",
     location: "Chicago, IL",
     description:
-      "Just a short description. I'm tired of typing. I'm going to play video games now.",
+      "Random photo taken outside of the new café!",
     picturePath: "post5.jpeg",
     userPicturePath: "p8.jpeg",
     likes: new Map([
@@ -266,7 +266,7 @@ export const posts = [
     lastName: "Dunn",
     location: "Washington, DC",
     description:
-      "For the last time, I'm going to play video games now. I'm tired of typing. I'm going to play video games now.",
+      "Evening stroll...",
     picturePath: "post6.jpeg",
     userPicturePath: "p10.jpeg",
     likes: new Map([

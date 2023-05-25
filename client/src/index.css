@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 
 
 /* font-family: 'Inter', sans-serif;
@@ -20,49 +20,60 @@ font-family: 'Rubik', sans-serif;
 /* DARK MODE */
 
 .css-16vbkgj-MuiTypography-root {
-  color: #f6e096 !important;
+  color: #ff6e5e !important;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 .css-18l7mx6-MuiButtonBase-root-MuiButton-root.Mui-disabled {
-  background-color: #00D5FA !important;
-  color: #f6e096 !important;
+  background-color: #ff6e5e !important;
+  color: #000000 !important;
 }
 
 .css-155c1kw-MuiInputBase-root {
   width: auto !important;
-  color: #f6e096 !important;
+  color: #ff6e5e !important;
+}
+
+.MuiBox-root {
+  color: #008690 !important;
 }
 
 /* LIGHT MODE */
 
-.css-12a2lu5-MuiTypography-root {
-  color: #4f60f9!important;
-}
 
-.css-3494nj-MuiButtonBase-root-MuiButton-root.Mui-disabled {
-  background-color: #00D5FA !important;
-  color: #f6e096 !important;
+
+/* .css-poa6bm-MuiButtonBase-root {
+  color: #008690 !important;
+} */
+
+.css-12a2lu5-MuiTypography-root {
+  color: #008690 !important;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 .css-1mb3v9h-MuiInputBase-root {
   width: auto !important;
-  color: #4f60f9 !important;
+  color: #008690 !important;
 }
 
 /* BOTH */
 
-.MuiButtonBase-root {
+/* .MuiButtonBase-root {
   color: #1aa8f5!important;
 
-}
+} */
 
 .MuiButton-root {
-  color: #00D5FA !important;
-  background-color: #f6e096 !important;
+  color: #000000 !important;
+}
+
+.css-3494nj-MuiButtonBase-root-MuiButton-root.Mui-disabled {
+  background-color: #008690 !important;
+  color: #ffffff !important;
 }
 
 .css-havevq-MuiSvgIcon-root {
-  color: #4f60f9 !important;
+  color: #ff6e5e !important;
 }
 
 .slide {
