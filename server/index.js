@@ -42,7 +42,16 @@ const storage = multer.diskStorage({
     cb(null, file.originalname);
   },
 });
-const upload = multer({ storage });
+
+const multerFilter = (req, file, cb) => {
+    if (file.mimetype.split("/")[1] === ".png", ".jpg", ".jpeg") {
+      cb(null, true);
+    } else {
+      cb(new Error("Not a .png, .jpg, or .jpeg File!!"), false);
+    }
+  };
+
+const upload = multer({ storage, multerFilter });
 
 /* ROUTES WITH FILES */
 app.post("/auth/register", upload.single("picture"), register);
