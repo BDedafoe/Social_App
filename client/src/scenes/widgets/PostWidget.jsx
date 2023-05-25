@@ -14,6 +14,8 @@ import {
   import { setPost } from "state";
   import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import { dark } from "@mui/material/styles/createPalette";
+import { yellow } from "@mui/material/colors";
   
   const PostWidget = ({
     postId,

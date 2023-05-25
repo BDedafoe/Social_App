@@ -62,8 +62,8 @@ export const users = [
   },
   {
     _id: userIds[3],
-    firstName: "Whatcha",
-    lastName: "Doing",
+    firstName: "Pam",
+    lastName: "Grimes",
     email: "whatchadoing@gmail.com",
     password: "$2b$10$dsasdgsagasda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
     picturePath: "p6.jpeg",
@@ -130,7 +130,7 @@ export const users = [
     lastName: "Dunn",
     email: "jessicadunn@gmail.com",
     password: "$2b$10$dsasdgsagasda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
-    picturePath: "p9.jpeg",
+    picturePath: "p10.jpeg",
     friends: [],
     location: "Washington, DC",
     occupation: "A Student",
@@ -167,8 +167,8 @@ export const posts = [
   {
     _id: new mongoose.Types.ObjectId(),
     userId: userIds[3],
-    firstName: "Whatcha",
-    lastName: "Doing",
+    firstName: "Pam",
+    lastName: "Grimes",
     location: "Korea, CA",
     description:
       "Another really long random description. This one is longer than the previous one.",
@@ -215,7 +215,7 @@ export const posts = [
     _id: new mongoose.Types.ObjectId(),
     userId: userIds[5],
     firstName: "Harvey",
-    lastName: "Dunn",
+    lastName: "Vanderbeer",
     location: "Los Angeles, CA",
     description:
       "This is the last really long random description. This one is longer than the previous one. Man I'm bored. I'm going to keep typing until I run out of things to say.",
@@ -268,7 +268,7 @@ export const posts = [
     description:
       "For the last time, I'm going to play video games now. I'm tired of typing. I'm going to play video games now.",
     picturePath: "post6.jpeg",
-    userPicturePath: "p9.jpeg",
+    userPicturePath: "p10.jpeg",
     likes: new Map([
       [userIds[1], true],
       [userIds[2], true],

@@ -81,7 +81,7 @@ import {
             p="1rem"
           >
             <Dropzone
-              acceptedFiles="image/.png, image/.jpeg, image/.jpg, image/*, image/.heic"
+              acceptedFiles=".png, .jpeg, .jpg, .gif, .html, .pdf"
               multiple={false}
               onDrop={(acceptedFiles) => setImage(acceptedFiles[0])}
             >
