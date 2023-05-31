@@ -2,7 +2,6 @@ import {
     EditOutlined,
     DeleteOutlined,
     AttachFileOutlined,
-    GifBoxOutlined,
     ImageOutlined,
     MicOutlined,
     MoreHorizOutlined,
@@ -45,7 +44,7 @@ import {
         formData.append("picture", image);
         formData.append("picturePath", image.name);
       }
-                                    //https://famchat.onrender.com/posts
+                                  
       const response = await fetch(`https://famchat.onrender.com/posts`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },

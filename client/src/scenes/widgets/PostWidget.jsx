@@ -2,7 +2,6 @@ import {
     ChatBubbleOutlineOutlined,
     FavoriteBorderOutlined,
     FavoriteOutlined,
-    ShareOutlined,
     ClearOutlined,
   } from "@mui/icons-material";
   import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
@@ -71,9 +70,23 @@ import { yellow } from "@mui/material/colors";
     });
   };
 
- if (shouldRerender) {
-    return null; // return null to prevent rendering the deleted post
-  }
+  const deleteComment = async () => {
+    const response = await fetch(`https://famchat.onrender.com/posts/${postId}/comment`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ userId: loggedInUserId }),
+    });
+    const updatedPost = await response.json();
+    dispatch(setPost({ post: updatedPost }));
+
+    if (shouldRerender) {
+        return null; // return null to prevent rendering the deleted post
+      }
+  };
+
   
     return (
       <WidgetWrapper m="2rem 0">
@@ -116,12 +129,10 @@ import { yellow } from "@mui/material/colors";
             </FlexBetween>
           </FlexBetween>
   
-          <IconButton onClick={({message}) => handleDelete(!isComments)}>
-          <ToastContainer autoClose={1500}/>
+          <IconButton>
             <ClearOutlined />
           </IconButton>
         </FlexBetween>
-
         {isComments && (
           <Box mt="0.5rem">
             {comments.map((comment, i) => (
@@ -129,6 +140,10 @@ import { yellow } from "@mui/material/colors";
                 <Divider />
                 <Typography sx={{ color: main, m: "0.5rem 0", pl: "1rem" }}>
                   {comment}
+                  <IconButton onClick={deleteComment}>
+                    <ToastContainer autoClose={1500}/>
+                        <ClearOutlined />
+                    </IconButton>
                 </Typography>
               </Box>
             ))}
