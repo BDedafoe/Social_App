@@ -24,6 +24,11 @@ font-family: 'Rubik', sans-serif;
   font-family: 'Montserrat', sans-serif !important;
 }
 
+.css-15bj9oc , .css-1b1os4q, .css-dlj3h, .css-10av6eg {
+  color: #ff6e5e !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
 .css-18l7mx6-MuiButtonBase-root-MuiButton-root.Mui-disabled {
   background-color: #ff6e5e !important;
   color: #000000 !important;
@@ -36,9 +41,23 @@ font-family: 'Rubik', sans-serif;
 
 .MuiBox-root {
   color: #008690 !important;
+} 
+
+.css-1xbpan2  {
+  color: #008690 !important;
+} 
+
+
+.css-167qg84 {
+  color: #ff6e5e !important;
 }
 
 .css-1s9dlqc-MuiTypography-root {
+  color: #ff6e5e !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.css-4qxq8c {
   color: #ff6e5e !important;
   font-family: 'Montserrat', sans-serif !important;
 }
@@ -48,9 +67,13 @@ font-family: 'Rubik', sans-serif;
   color: #008690 !important;
 } */
 
-.css-12a2lu5-MuiTypography-root {
+.css-12a2lu5-MuiTypography-root, .css-120nj17 {
   color: #008690 !important;
   font-family: 'Montserrat', sans-serif !important;
+}
+
+.css-rrlqo {
+  color: #008690 !important;
 }
 
 .css-1mb3v9h-MuiInputBase-root {
@@ -74,7 +97,7 @@ font-family: 'Rubik', sans-serif;
   color: #ffffff !important;
 }
 
-.css-havevq-MuiSvgIcon-root {
+.css-havevq-MuiSvgIcon-root , .css-11fo197 {
   color: #ff6e5e !important;
 }
 

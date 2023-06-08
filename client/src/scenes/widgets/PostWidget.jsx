@@ -13,8 +13,6 @@ import {
   import { setPost } from "state";
   import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
-import { dark } from "@mui/material/styles/createPalette";
-import { yellow } from "@mui/material/colors";
   
   const PostWidget = ({
     postId,
@@ -68,6 +66,10 @@ import { yellow } from "@mui/material/colors";
     toast('Post deleted!', {
       position: toast.POSITION.TOP_RIGHT
     });
+
+    if (shouldRerender) {
+      return null; // return null to prevent rendering the deleted post
+    }
   };
 
   const deleteComment = async () => {
@@ -77,10 +79,12 @@ import { yellow } from "@mui/material/colors";
         Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ userId: loggedInUserId }),
     });
-    const updatedPost = await response.json();
-    dispatch(setPost({ post: updatedPost }));
+    const message = await response.json();
+    setShouldRerender(true);
+    toast('Comment deleted!', {
+      position: toast.POSITION.TOP_RIGHT
+    });
 
     if (shouldRerender) {
         return null; // return null to prevent rendering the deleted post
@@ -129,7 +133,8 @@ import { yellow } from "@mui/material/colors";
             </FlexBetween>
           </FlexBetween>
   
-          <IconButton>
+          <IconButton onClick={handleDelete}>
+          <ToastContainer autoClose={1500}/>
             <ClearOutlined />
           </IconButton>
         </FlexBetween>
